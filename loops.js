@@ -11,7 +11,30 @@ const colorLoop = () => {
 }
 
 const init = () => {
-colorLoop();
+//colorLoop();
+instructorsLoop();
+}
+
+const instructors = [{
+    firstName:  'Jay',
+    lastName:'Ibrahim'
+},
+{
+    firstName: 'Luke',
+    lastName: 'Lancaster'
+},
+{
+    firstName: 'Elias',
+    lastName: 'Ibrahim',
+}];
+
+const instructorsLoop = () => {
+    let domString = '';
+    for (let i = 0; i < instructors.length; i++) {
+        
+        domString += `<h2>${instructors[i].firstName} ${instructors[i].lastName}</h2> `;
+    }
+    console.log(domString);
 }
 
 init();
